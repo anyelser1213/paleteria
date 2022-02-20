@@ -18,11 +18,12 @@ class Login(LoginView):
         if request.user.is_authenticated:
 
             print("Estas autenticado y vas al INDEX.HTML")
-            print(request.user)
+            #print(request.user)
             return redirect("src:index")
 
         else:
-            print(request.user)
+            print("Entramos en login")
+            #print(request.user)
             print("No estas autenticado, eres un usuario anonimo")
             return super().dispatch(request, *args, **kwargs)
 

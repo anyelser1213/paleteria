@@ -184,6 +184,7 @@ html { height: 100%;}
 .dropdown-menu.show {
     top: 0;
 }
+
 /*Fontawesome icons*/
 .nav.sidebar-nav li a::before {
     font-family: fontawesome;
@@ -192,7 +193,7 @@ html { height: 100%;}
     display: inline-block;
     padding-right: 5px;
 }
-a[href*="#home"]::before {
+.iconoHome::before {
   content: "\f015" !important;
 }
 a[href*="#about"]::before {
@@ -235,6 +236,13 @@ a[href*="#followme"]::before {
   content: "\f099" !important;
   color: #0084b4;
 }
+
+a[href*="#salir"]::before {
+  content: "\f00d" !important;
+  /*color: red;*/
+}
+
+
 /*-------------------------------*/
 /*       Hamburger-Cross         */
 /*-------------------------------*/

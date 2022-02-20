@@ -7,13 +7,18 @@ from django.shortcuts import redirect, render
 class Index(TemplateView):
 
     template_name = "src/index.html"
+    print("Entramos aqui en index")
 
     def dispatch(self, request, *args, **kwargs):
 
+
         if request.user.is_anonymous:
-            print("No estas autenticado, eres un usuario anonimo")
+
+            print("No estas autenticado, eres un usuario anonimo...")
             return redirect("/login")
+
         else:
+
             print("Estas autenticado")
 
         return super().dispatch(request, *args, **kwargs)
