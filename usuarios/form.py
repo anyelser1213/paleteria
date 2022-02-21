@@ -22,8 +22,8 @@ class loginForm(AuthenticationForm):
 
         #self.fields['descripcion'].widget.attrs.update({'placeholder': 'Descripción','autofocus': 'true','class': 'descripcion form-control' })
         self.fields['username'].error_messages = {'required': 'Esto es grave aqui!'}
-        self.fields['username'].widget.attrs.update({'class': ' browser-default','placeholder':'Enter Username','name':'user' })
-        self.fields['password'].widget.attrs.update({'class': ' browser-default','placeholder':'Enter Password' })
+        self.fields['username'].widget.attrs.update({'class': ' input','placeholder':'Ingrese username' })
+        self.fields['password'].widget.attrs.update({'class': ' input','placeholder':'Ingrese clave' })
 
     class Meta:
         labels = {

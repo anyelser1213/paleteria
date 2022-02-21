@@ -82,7 +82,7 @@ class Usuarios(AbstractBaseUser,PermissionsMixin):
         default='usuario'
     )
     telefono = models.CharField("Telefono", max_length=50,blank=True,null=True,default="04242020470")
-    imagen = models.ImageField("Imagen de perfil", upload_to="perfil", max_length=200,blank=True,null=True)
+    imagen = models.ImageField("Imagen de perfil", upload_to="usuario/perfil/", max_length=200,blank=True,null=True)
     
     #Para enlazar al manager que has creado
     objects = UsuarioManager()

@@ -29,9 +29,10 @@ class Login(LoginView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        print("Metodo:",self.request.method)
-        print(self.form_class())
-        context['titulo'] = "Vouchly"
+        
+        #print("Metodo:",self.request.method)
+        #print(self.form_class())
+        context['titulo'] = "Inicio de sesion"
         #context['formRegistro'] = UsuariosForm(self.request.POST or None)
         return context
 
@@ -43,8 +44,8 @@ class Login(LoginView):
 
 class Logout(LogoutView):
 
-    template_name = "src/login.html"
-    next_page = "src:login"
+    template_name = "usuarios/login.html"
+    next_page = "usuarios:login"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
